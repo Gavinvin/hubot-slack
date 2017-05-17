@@ -175,7 +175,7 @@ class SlackBot extends Adapter
         @robot.logger.debug "Received message: '#{text}' in channel: #{channel.name}, from: #{user.name}"
         textMessage = new TextMessage(user, text, message.ts)
         textMessage.thread_ts = message.thread_ts
-		textMessage.attachments = attachments
+        textMessage.attachments = attachments
         @receive textMessage
 
       when 'channel_join', 'group_join'
